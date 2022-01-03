@@ -149,12 +149,14 @@ a {
     font-size: 15vw;
   }
   .intro h3 {
+    padding-top: 10px;
     font-size: 1.25rem;
   }
   .intro p {
     font-size: 0.8rem;
   }
-  .home-button {
+  .home-buttons {
+    padding-top: 20px;
     font-size: 0.7rem;
   }
 }
@@ -165,10 +167,16 @@ a {
   .sidebar.collapse {
     display: block !important;
   }
+  .home-buttons {
+    padding-top: 10px;
+  }
 }
 @media (max-width: 992px) and (min-width: 801px) {
   .hide-medium {
     display: none !important;
+  }
+  .home-buttons {
+    padding-top: 10px;
   }
 }
 .sidebar {
