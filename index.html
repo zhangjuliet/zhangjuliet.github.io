@@ -1,1 +1,135 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Juliet Zhang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Navbar, inspired by Startup W3.CSS Template (free to use, no license needed) -->
+    <div class="top">
+        <div class="bar white navbar-shadow" id="myNavbar">
+            <a href="#home" class="bar-item button">J U L I E T _ Z H A N G</a>
+            <div class="right hide-small">
+                <a href="#about" class="bar-item button about-button">About</a>
+                <a href="#work" class="bar-item button work-button">Work</a>
+                <a href="#projects" class="bar-item button projects-button">Projects</a>
+                <a href="#education" class="bar-item button education-button">Education</a>
+                <a href="#interests" class="bar-item button interests-button">Interests</a>
+                <a href="#contact" class="bar-item button contact-button">Contact</a>
+            </div>
+            <!-- Hide navbar links on small screens and replace with a menu icon -->
+            <a href="javascript:void(0)" class="bar-item button right hide-large hide-medium"
+                onclick="open_menu()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="sidebar bar-block black navbar-shadow animate-left hide-medium hide-large"
+        style="display:none" id="mySidebar">
+        <a href="javascript:void(0)" onclick="close_menu()"
+            class="bar-item button close-menu-button large menu-padding-20">x</a>
+        <a href="#about" onclick="close_menu()" class="bar-item button menu-button">About</a>
+        <a href="#work" onclick="close_menu()" class="bar-item button menu-button">Work</a>
+        <a href="#projects" onclick="close_menu()" class="bar-item button menu-button">Projects</a>
+        <a href="#education" onclick="close_menu()" class="bar-item button menu-button">Education</a>
+        <a href="#interests" onclick="close_menu()" class="bar-item button menu-button">Interests</a>
+        <a href="#contact" onclick="close_menu()" class="bar-item button menu-button">Contact</a>
+    </nav>
+
+    <!-- Home -->
+    <section class="home" id="home">
+        <div class="home-inner">
+            <h1 class="gradient">HELLO!</h1>
+            <h2 style="padding: 10px">I'm Juliet Zhang.</h2>
+            <br>
+            <div class="intro" style="padding: 10px">
+                <h3>Currently, I am:</h3>
+                <p>💻 studying <b>Computer Science</b> at UCLA (go Bruins!)</p>
+                <p>🔑 learning cybersecurity and web dev skills as an <a rel="noopener noreferrer" target="_blank" href="https://acmcyber.com/">ACM Cyber</a>
+                    intern</p>
+                <p>🎥 watching shows, acting in plays, and making short films</p>
+                <p>📈 researching stocks as a <a rel="noopener noreferrer" target="_blank" href="https://www.bruinstockgroup.com/">Bruin Stock Group</a> analyst
+                </p>
+                <p>🍜 obsessing over food :)</p>
+                <p>💼 <b><i>looking for a summer tech internship!</i></b></p>
+            </div>
+            <br>
+            <div class="home-buttons" style="padding: 10px">
+                <a class="home-button" rel="noopener noreferrer" target="_blank" href="files/resume.pdf">
+                    <span class="fa fa-file"></span> Résumé</a>
+                <br>
+                <a class="home-button" rel="noopener noreferrer" target="_blank"
+                    href="https://www.linkedin.com/in/zhang-juliet">
+                    <span class="fa fa-linkedin"></span> LinkedIn</a>
+                <br>
+                <a class="home-button" rel="noopener noreferrer" target="_blank" href="https://github.com/zhangjuliet">
+                    <span class="fa fa-github"></span> GitHub</a>
+            </div>
+        </div>
+        <a href=#about><div class="scroll-down"></div></a>
+    </section>
+
+    <!-- Main -->
+    <section class="padding-20" id="about">
+        <h2 class="about-title">ABOUT</h2>
+    </section>
+
+    <section class="padding-20" id="work">
+        <h2 class="work-title">WORK</h2>
+    </section>
+
+    <section class="padding-20" id="projects">
+        <h2 class="projects-title">PROJECTS</h2>
+        <!-- TODO: add links to volunteer tracker and GIS project youtube videos -->
+    </section>
+
+    <section class="padding-20" id="education">
+        <h2 class="education-title">EDUCATION</h2>
+    </section>
+
+    <section class="padding-20" id="interests">
+        <h2 class="interests-title">INTERESTS</h2>
+    </section>
+
+    <section class="padding-20" id="contact">
+        <h2 class="contact-title">CONTACT</h2>
+        <p style="padding-top: 30px"><span class="fa fa-envelope"></span><b> EMAIL: </b><a rel="noopener noreferrer" href="mailto:julietzhang@g.ucla.edu">julietzhang@g.ucla.edu</a></p><br>
+        <p><span class="fa fa-linkedin"></span><b> LINKEDIN: </b><a rel="noopener noreferrer" href="https://www.linkedin.com/in/zhang-juliet">https://www.linkedin.com/in/zhang-juliet</a></p>
+    </section>
+
+    <!-- TODO: Delete this Under Construction message when finished -->
+    <section class="padding-20" style="text-align: center">
+        <h3>🚧 This website is currently under construction. Check back soon for updates!</h3><br><br>
+    </section>
+
+    <script>
+        // Toggle between showing and hiding the sidebar when clicking the menu icon
+        var mySidebar = document.getElementById("mySidebar");
+
+        function open_menu() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+            } else {
+                mySidebar.style.display = 'block';
+            }
+        }
+
+        // Close the sidebar with the close button
+        function close_menu() {
+            mySidebar.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
