@@ -145,6 +145,18 @@ a {
   .hide-small {
     display: none !important;
   }
+  .gradient {
+    font-size: 15vw;
+  }
+  .intro h3 {
+    font-size: 1.25rem;
+  }
+  .intro p {
+    font-size: 0.8rem;
+  }
+  .home-button {
+    font-size: 0.7rem;
+  }
 }
 @media (min-width: 993px) {
   .hide-large {
