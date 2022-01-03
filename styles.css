@@ -148,6 +148,9 @@ a {
   .gradient {
     font-size: 15vw;
   }
+  .home-inner h2 {
+    font-size: 2.5rem;
+  }
   .intro h3 {
     padding-top: 10px;
     font-size: 1.25rem;
@@ -233,13 +236,13 @@ a {
 
 /* Home */
 .home {
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
 
   background-image: url(images/me.png);
   background-size: 80%;
-  background-position: 170% 90%;
+  background-position: 170% 80%;
   background-repeat: no-repeat;
 }
 
@@ -277,7 +280,7 @@ a {
 .scroll-down {
   position: absolute;
   left: 50%;
-  bottom: 45px;
+  bottom: 10%;
   display: block;
   text-align: center;
   font-size: 20px;
@@ -289,7 +292,6 @@ a {
   border-bottom: 2px solid #FF9999;
   border-right: 2px solid #FF9999;
   z-index: 9;
-  left: 50%;
   -webkit-transform: translate(-50%, 0%) rotate(45deg);
   -moz-transform: translate(-50%, 0%) rotate(45deg);
   transform: translate(-50%, 0%) rotate(45deg);
