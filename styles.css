@@ -29,22 +29,26 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 /* End of reset styles */
 
@@ -58,7 +62,7 @@ body {
   padding: 20px;
 }
 a {
-  color: #FF9999;
+  color: #dd4d5e;
 }
 
 /* Navbar, inspired by Startup W3.CSS Template (free to use, no license needed) */
@@ -118,27 +122,27 @@ a {
   background-color: rgb(126, 0, 0);
 }
 .about-button:hover {
-  background-color: #FFEBB1;
+  background-color: #ffebb1;
   border-radius: 7px;
 }
 .work-button:hover {
-  background-color: #FFDBAC;
+  background-color: #ffdbac;
   border-radius: 7px;
 }
 .projects-button:hover {
-  background-color: #FFCAA7;
+  background-color: #ffcaa7;
   border-radius: 7px;
 }
 .education-button:hover {
-  background-color: #FFBAA3;
+  background-color: #ffbaa3;
   border-radius: 7px;
 }
 .interests-button:hover {
-  background-color: #FFA99E;
+  background-color: #ffa99e;
   border-radius: 7px;
 }
 .contact-button:hover {
-  background-color: #FF9999;
+  background-color: #ff9999;
   border-radius: 7px;
 }
 @media (max-width: 800px) {
@@ -240,10 +244,10 @@ a {
   justify-content: center;
   align-items: center;
 
-  background-image: url(images/me.png);
+  /* background-image: url(images/me.png);
   background-size: 80%;
   background-position: 170% 80%;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 .home-inner {
@@ -257,22 +261,36 @@ a {
 
 .gradient {
   background-color: black;
-  background: linear-gradient(to left, #FFEBB1, #FF9999);
+  background: linear-gradient(to left, #ffebb1, #ff9999);
   background-size: 100%;
   background-repeat: repeat;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; 
+  -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
   animation: color_change 5s ease-in-out infinite;
   background-size: 400% 100%;
 }
 @keyframes color_change {
-  0%,100% {
+  0%,
+  100% {
     background-position: 0 0;
   }
   50% {
     background-position: 100%;
+  }
+}
+
+.me-image {
+  max-height: 40vmax;
+  border-radius: 7%;
+  float: right;
+  padding-left: 10px;
+}
+@media (max-width: 700px) {
+  .me-image {
+    float: none;
+    padding: 0;
   }
 }
 
@@ -289,30 +307,54 @@ a {
   text-shadow: 0;
   width: 13px;
   height: 13px;
-  border-bottom: 2px solid #FF9999;
-  border-right: 2px solid #FF9999;
+  border-bottom: 2px solid #dd4d5e;
+  border-right: 2px solid #dd4d5e;
   z-index: 9;
   -webkit-transform: translate(-50%, 0%) rotate(45deg);
   -moz-transform: translate(-50%, 0%) rotate(45deg);
   transform: translate(-50%, 0%) rotate(45deg);
   -webkit-animation: fade_move_down 4s ease-in-out infinite;
-  -moz-animation:    fade_move_down 4s ease-in-out infinite;
-  animation:         fade_move_down 4s ease-in-out infinite;
+  -moz-animation: fade_move_down 4s ease-in-out infinite;
+  animation: fade_move_down 4s ease-in-out infinite;
 }
 @-webkit-keyframes fade_move_down {
-  0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
-  50%  { opacity: 1;  }
-  100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  0% {
+    -webkit-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
 }
 @-moz-keyframes fade_move_down {
-  0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
-  50%  { opacity: 1;  }
-  100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  0% {
+    -moz-transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
 }
 @keyframes fade_move_down {
-  0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
-  50%  { opacity: 1;  }
-  100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  0% {
+    transform: translate(0, -10px) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 10px) rotate(45deg);
+    opacity: 0;
+  }
 }
 
 /* Home intro */
@@ -324,7 +366,7 @@ a {
 .home-button {
   text-decoration: none;
   display: inline-block;
-  border: 1px solid #FF9999;
+  border: 1px solid #dd4d5e;
   border-radius: 10px;
   padding: 1em;
   text-align: center;
@@ -332,7 +374,7 @@ a {
   width: 25%;
 }
 .home-button:hover {
-  background-color: #FF9999;
+  background-color: #dd4d5e;
   color: white;
 }
 /* End of home */
@@ -369,7 +411,7 @@ p {
   z-index: -1;
   bottom: -10px;
   left: -5px;
-  background-color: #FFEBB1;
+  background-color: #ffebb1;
   animation-name: highlight-text;
   animation-duration: 2s;
   animation-fill-mode: both;
@@ -384,7 +426,7 @@ p {
   z-index: -1;
   bottom: -10px;
   left: -5px;
-  background-color: #FFDBAC;
+  background-color: #ffdbac;
   animation-name: highlight-text;
   animation-duration: 2s;
   animation-fill-mode: both;
@@ -399,7 +441,7 @@ p {
   z-index: -1;
   bottom: -10px;
   left: -5px;
-  background-color: #FFCAA7;
+  background-color: #ffcaa7;
   animation-name: highlight-text;
   animation-duration: 2s;
   animation-fill-mode: both;
@@ -414,7 +456,7 @@ p {
   z-index: -1;
   bottom: -10px;
   left: -5px;
-  background-color: #FFBAA3;
+  background-color: #ffbaa3;
   animation-name: highlight-text;
   animation-duration: 2s;
   animation-fill-mode: both;
@@ -429,7 +471,7 @@ p {
   z-index: -1;
   bottom: -10px;
   left: -5px;
-  background-color: #FFA99E;
+  background-color: #ffa99e;
   animation-name: highlight-text;
   animation-duration: 2s;
   animation-fill-mode: both;
@@ -444,7 +486,7 @@ p {
   z-index: -1;
   bottom: -10px;
   left: -5px;
-  background-color: #FF9999;
+  background-color: #ff9999;
   animation-name: highlight-text;
   animation-duration: 2s;
   animation-fill-mode: both;
@@ -459,3 +501,6 @@ p {
     height: 2.5rem;
   }
 }
+
+
+/* TODO: I made the theme color darker to improve accessibility, but it no longer matches the gradient color. Needs updating.*/
