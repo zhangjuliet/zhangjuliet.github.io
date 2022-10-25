@@ -54,7 +54,7 @@ table {
 
 /* Basics */
 body {
-  font-family: "Trebuchet MS", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", "Trebuchet MS", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #181818;
   height: 100%;
 }
@@ -156,11 +156,11 @@ a {
     font-size: 2.5rem;
   }
   .intro h3 {
-    padding-top: 10px;
+    padding-top: 10px; 
     font-size: 1.25rem;
   }
   .intro p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   .home-buttons {
     padding-top: 20px;
@@ -176,6 +176,9 @@ a {
   }
   .home-buttons {
     padding-top: 10px;
+  }
+  .intro h3 {
+    margin-top: 2.5rem;
   }
 }
 @media (max-width: 992px) and (min-width: 801px) {
@@ -287,7 +290,7 @@ a {
   float: right;
   padding-left: 10px;
 }
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .me-image {
     float: none;
     padding: 0;
@@ -360,6 +363,10 @@ a {
 /* Home intro */
 .intro {
   line-height: 1.5;
+}
+
+.intro p {
+  font-size: 1.1rem;
 }
 
 /* Home buttons */
