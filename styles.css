@@ -3,30 +3,105 @@
   v2.0 | 20110126
   License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
   scroll-behavior: smooth;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
   line-height: 1;
@@ -54,7 +129,8 @@ table {
 
 /* Basics */
 body {
-  font-family: "PT Sans", "Trebuchet MS", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "PT Sans", "Trebuchet MS", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
   color: #181818;
   height: 100%;
 }
@@ -146,6 +222,7 @@ a {
   border-radius: 7px;
 }
 @media (max-width: 800px) {
+  /* smallest screen */
   .hide-small {
     display: none !important;
   }
@@ -156,37 +233,35 @@ a {
     font-size: 2.5rem;
   }
   .intro h3 {
-    padding-top: 10px; 
+    padding-top: 10px;
     font-size: 1.25rem;
   }
   .intro p {
     font-size: 0.9rem;
   }
   .home-buttons {
-    padding-top: 20px;
-    font-size: 0.7rem;
+    display: flex;
   }
 }
-@media (min-width: 993px) {
+@media (max-width: 1000px) and (min-width: 801px) {
+  /* medium screen */
+  .hide-medium {
+    display: none !important;
+  }
+  .home-buttons {
+    display: flex;
+  }
+}
+@media (min-width: 1000px) {
+  /* biggest screen */
   .hide-large {
     display: none !important;
   }
   .sidebar.collapse {
     display: block !important;
   }
-  .home-buttons {
-    padding-top: 10px;
-  }
   .intro h3 {
     margin-top: 2.5rem;
-  }
-}
-@media (max-width: 992px) and (min-width: 801px) {
-  .hide-medium {
-    display: none !important;
-  }
-  .home-buttons {
-    padding-top: 10px;
   }
 }
 .sidebar {
@@ -294,6 +369,7 @@ a {
   .me-image {
     float: none;
     padding: 0;
+    max-height: 30vmax;
   }
 }
 
@@ -301,7 +377,7 @@ a {
 .scroll-down {
   position: absolute;
   left: 50%;
-  bottom: 10%;
+  bottom: 5%;
   display: block;
   text-align: center;
   font-size: 20px;
@@ -369,6 +445,11 @@ a {
   font-size: 1.1rem;
 }
 
+#roleSequence {
+  font-size: 1.5rem;
+  padding: 2rem 0rem;
+}
+
 /* Home buttons */
 .home-button {
   text-decoration: none;
@@ -378,6 +459,7 @@ a {
   padding: 1em;
   text-align: center;
   margin-bottom: 1em;
+  margin-right: 2rem;
   width: 25%;
 }
 .home-button:hover {
@@ -393,7 +475,6 @@ h1 {
 }
 h2 {
   font-size: 3rem;
-  font-style: italic;
 }
 h3 {
   font-size: 2rem;
@@ -508,6 +589,5 @@ p {
     height: 2.5rem;
   }
 }
-
 
 /* TODO: I made the theme color darker to improve accessibility, but it no longer matches the gradient color. Needs updating.*/
